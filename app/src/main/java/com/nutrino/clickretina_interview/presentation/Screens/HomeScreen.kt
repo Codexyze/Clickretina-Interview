@@ -35,6 +35,13 @@ import com.nutrino.clickretina_interview.presentation.Viewmodels.CourseViewModel
 import com.nutrino.clickretina_interview.presentation.elements.ErrorScreen
 import com.nutrino.clickretina_interview.presentation.elements.LoadingScreen
 
+/**
+ * The main landing screen of the application.
+ * Displays course categories and a list of popular courses with search functionality.
+ *
+ * @param navController Controller used for navigating between screens.
+ * @param viewModel The [CourseViewModel] providing state and data.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
@@ -117,6 +124,9 @@ fun HomeScreen(
     }
 }
 
+/**
+ * Top section of the Home screen displaying a welcome message and user avatar.
+ */
 @Composable
 fun HeaderSection() {
     Row(
@@ -173,6 +183,12 @@ fun HeaderSection() {
     }
 }
 
+/**
+ * Styled search input field.
+ * 
+ * @param query Current text in the search field.
+ * @param onQueryChange Callback for text changes.
+ */
 @Composable
 fun SearchSection(query: String, onQueryChange: (String) -> Unit) {
     OutlinedTextField(
@@ -196,6 +212,12 @@ fun SearchSection(query: String, onQueryChange: (String) -> Unit) {
     )
 }
 
+/**
+ * A header for sections in the Home screen with a "See all" button.
+ * 
+ * @param title The title of the section.
+ * @param onSeeAllClick Callback for the "See all" action.
+ */
 @Composable
 fun SectionHeader(title: String, onSeeAllClick: () -> Unit) {
     Row(
@@ -220,6 +242,11 @@ fun SectionHeader(title: String, onSeeAllClick: () -> Unit) {
     }
 }
 
+/**
+ * Horizontal list item representing a course category.
+ * 
+ * @param category The [CategoryModel] data to display.
+ */
 @Composable
 fun CategoryItem(category: CategoryModel) {
     Surface(
@@ -263,6 +290,13 @@ fun CategoryItem(category: CategoryModel) {
     }
 }
 
+/**
+ * Vertical list item representing a specific course.
+ * 
+ * @param categoryId ID of the category this course belongs to.
+ * @param course The [CourseDetailModel] data to display.
+ * @param onClick Callback for when the course item is clicked.
+ */
 @Composable
 fun CourseItem(categoryId: String, course: CourseDetailModel, onClick: () -> Unit) {
     Surface(

@@ -12,10 +12,14 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+/**
+ * Hilt Module for providing core application dependencies such as Retrofit, ApiService, and Repositories.
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 object DiModule {
 
+    /** Provides a singleton instance of [Retrofit]. */
     @Provides
     @Singleton
     fun provideRetrofit(): Retrofit {
@@ -25,18 +29,21 @@ object DiModule {
             .build()
     }
 
+    /** Provides a singleton instance of [ApiService]. */
     @Provides
     @Singleton
     fun provideApiService(retrofit: Retrofit): ApiService {
         return retrofit.create(ApiService::class.java)
     }
 
+    /** Provides a singleton instance of [CourseRepository]. */
     @Provides
     @Singleton
     fun provideCourseRepository(apiService: ApiService): CourseRepository {
         return CourseRepoImpl(apiService)
     }
 
+    /** Provides a singleton instance of [GetCourseUseCase]. */
     @Provides
     @Singleton
     fun provideGetCourseUseCase(repository: CourseRepository): GetCourseUseCase {

@@ -3,6 +3,9 @@ package com.nutrino.clickretina_interview.data.mappers.course
 import com.nutrino.clickretina_interview.data.remote.apiResponse.*
 import com.nutrino.clickretina_interview.domain.models.course.*
 
+/**
+ * Extension function to map [CourseDetailsReponse] (Data Transfer Object) to [CourseModel] (Domain Model).
+ */
 fun CourseDetailsReponse.toDomain(): CourseModel {
     return CourseModel(
         categories = this.categories?.mapNotNull { it?.toDomain() } ?: emptyList(),
@@ -10,6 +13,9 @@ fun CourseDetailsReponse.toDomain(): CourseModel {
     )
 }
 
+/**
+ * Extension function to map [Category] DTO to [CategoryModel] domain entity.
+ */
 fun Category.toDomain(): CategoryModel {
     return CategoryModel(
         id = this.id ?: "",
@@ -21,6 +27,9 @@ fun Category.toDomain(): CategoryModel {
     )
 }
 
+/**
+ * Extension function to map [Course] DTO to [CourseDetailModel] domain entity.
+ */
 fun Course.toDomain(): CourseDetailModel {
     return CourseDetailModel(
         id = this.id ?: "",
@@ -40,6 +49,9 @@ fun Course.toDomain(): CourseDetailModel {
     )
 }
 
+/**
+ * Extension function to map [Instructor] DTO to [InstructorModel] domain entity.
+ */
 fun Instructor.toDomain(): InstructorModel {
     return InstructorModel(
         id = this.id ?: "",
@@ -50,6 +62,9 @@ fun Instructor.toDomain(): InstructorModel {
     )
 }
 
+/**
+ * Extension function to map [Lesson] DTO to [LessonModel] domain entity.
+ */
 fun Lesson.toDomain(): LessonModel {
     return LessonModel(
         id = this.id ?: "",
@@ -61,6 +76,9 @@ fun Lesson.toDomain(): LessonModel {
     )
 }
 
+/**
+ * Extension function to map [Meta] DTO to [MetaModel] domain entity.
+ */
 fun Meta.toDomain(): MetaModel {
     return MetaModel(
         app = this.app ?: "",

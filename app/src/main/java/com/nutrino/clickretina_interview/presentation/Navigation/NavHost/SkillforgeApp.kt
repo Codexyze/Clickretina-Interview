@@ -12,6 +12,10 @@ import com.nutrino.clickretina_interview.presentation.Screens.CourseDetailScreen
 import com.nutrino.clickretina_interview.presentation.Screens.HomeScreen
 import com.nutrino.clickretina_interview.presentation.Screens.LessonScreen
 
+/**
+ * The main application entry point that sets up the navigation graph.
+ * Uses type-safe navigation to handle transitions between Home, Course Detail, and Lesson screens.
+ */
 @Composable
 fun SkillforgeApp() {
     val navController = rememberNavController()

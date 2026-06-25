@@ -7,6 +7,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
+/**
+ * A reusable Composable that displays a centered loading indicator.
+ * Used during data fetching operations.
+ */
 @Composable
 fun LoadingScreen() {
     Box(

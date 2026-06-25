@@ -29,6 +29,15 @@ import com.nutrino.clickretina_interview.presentation.Viewmodels.CourseViewModel
 import com.nutrino.clickretina_interview.presentation.elements.ErrorScreen
 import com.nutrino.clickretina_interview.presentation.elements.LoadingScreen
 
+/**
+ * Screen for viewing a specific lesson's video and notes.
+ *
+ * @param categoryId ID of the category.
+ * @param courseId ID of the course.
+ * @param lessonId ID of the current lesson to display.
+ * @param navController Navigation controller.
+ * @param viewModel ViewModel for data access.
+ */
 @Composable
 fun LessonScreen(
     categoryId: String,
@@ -65,6 +74,13 @@ fun LessonScreen(
     }
 }
 
+/**
+ * Main content layout for the Lesson screen.
+ * 
+ * @param course The current course detail model.
+ * @param currentLesson The lesson being played.
+ * @param navController Navigation controller.
+ */
 @Composable
 fun LessonContent(course: CourseDetailModel, currentLesson: LessonModel, navController: NavController) {
     Column(modifier = Modifier.fillMaxSize()) {

@@ -34,6 +34,15 @@ import com.nutrino.clickretina_interview.presentation.Viewmodels.CourseViewModel
 import com.nutrino.clickretina_interview.presentation.elements.ErrorScreen
 import com.nutrino.clickretina_interview.presentation.elements.LoadingScreen
 
+/**
+ * Screen displaying detailed information about a selected course.
+ * Shows instructor details, course description, and a list of lessons.
+ *
+ * @param categoryId ID of the category the course belongs to.
+ * @param courseId ID of the specific course to display.
+ * @param navController Controller for app navigation.
+ * @param viewModel ViewModel providing course data.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CourseDetailScreen(
@@ -85,6 +94,12 @@ fun CourseDetailScreen(
     }
 }
 
+/**
+ * The primary scrollable content of the Course Detail screen.
+ * 
+ * @param course The [CourseDetailModel] data to display.
+ * @param onLessonClicked Callback for navigating to a specific lesson.
+ */
 @Composable
 fun CourseDetailContent(course: CourseDetailModel, onLessonClicked: (String) -> Unit) {
     LazyColumn(
@@ -148,6 +163,12 @@ fun CourseDetailContent(course: CourseDetailModel, onLessonClicked: (String) -> 
     }
 }
 
+/**
+ * List item representing a single lesson in the course detail view.
+ * 
+ * @param lesson The [LessonModel] data.
+ * @param onClick Callback for clicking the lesson.
+ */
 @Composable
 fun LessonItem(lesson: LessonModel, onClick: () -> Unit) {
     Surface(

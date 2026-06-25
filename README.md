@@ -1,3 +1,9 @@
+## Mobile Screen Sample :
+
+  <img src="https://github.com/user-attachments/assets/47aa58fd-ebb4-4bde-a5f0-d920f6085639" width="24%" />
+  <img src="https://github.com/user-attachments/assets/75dac8fd-f5d7-49eb-b5e4-3939553d21cf" width="24%" />
+  <img src="https://github.com/user-attachments/assets/9c0a93bf-e72f-41ad-9360-b18666572bee" width="24%" />
+  <img src="https://github.com/user-attachments/assets/b8dd2c4a-d12d-46c0-805d-ad4ff96adaa1" width="24%" />
 
 ## Tech Stack
 
@@ -9,6 +15,12 @@
 - **Asynchronous Flow:** [Kotlin Coroutines & Flow](https://kotlinlang.org/docs/coroutines-overview.html) - For handling background tasks and reactive data streams.
 - **Image Loading:** [Coil](https://coil-kt.github.io/coil/) - Optimized image loading for Jetpack Compose.
 - **Serialization:** [Kotlinx Serialization](https://kotlinlang.org/docs/serialization.html) - For type-safe navigation arguments.
+
+
+---
+
+
+
 
 ##  Architecture
 
